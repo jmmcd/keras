@@ -185,7 +185,7 @@ class Sequential(object):
                 if shuffle:
                     batch_ids = index_array[batch_start:batch_end]
                 else:
-                    batch_ids = slice(batch_start, batch_end)
+                    batch_ids = range(batch_start, batch_end)
                 seen += len(batch_ids)
                 X_batch = X[batch_ids]
                 y_batch = y[batch_ids]
